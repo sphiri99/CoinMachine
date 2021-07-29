@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Response</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body bgcolor="#f2f2f2">
+<div class="col-md-6 col-md-offset-3">
+    <h1>Response</h1>
+    <label id="message" style="font-weight:bold; color:red;" th:text="${error}"></label>
+    <form action="#" th:action="@{/coin}" method="get">
+        <div class="form-group">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf" cellpadding="10">
+                <tbody>
+                <tr>
+
+                    <td style="padding:0 15px 0 15px;"><input type="text"
+                                                              class="form-control"
+                                                              th:value="Hello" readonly="readonly"
+                                                              style="width:100px;"/></span></td>
+
+                    <td style="padding:0 15px 0 15px;"><input id="btnSubmit" type="submit" value="OK"/></span></td>
+
+                </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <br>
+        <div iv class="" style="width: 100%; margin: 0px auto">
+            <table class="col-md-12 table-bordered table-striped table-condensed cf" cellpadding="10">
+                <thead>
+                <tr>
+                    <th>ANSWER</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="responseItems : ${results}">
+                    <td style="padding:0 15px 0 15px;"><input type="text"
+                                                              class="form-control"
+                                                              th:value="answer" readonly="readonly"
+                                                              style="width:50px;"/></span></td>
+
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </form>
+
+</div>
+<!--
+
+-->
+</h1>
+</body>
+</html>
